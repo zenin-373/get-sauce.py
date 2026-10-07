@@ -4,10 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "get-sauce-py"
-version = "0.1.0"
-description = "Windows-friendly authorized-content downloader"
+version = "0.2.0"
+description = "Windows-friendly downloader for publicly accessible media"
 requires-python = ">=3.10"
 dependencies = ["requests>=2.32,<3"]
 
 [project.scripts]
 get-sauce = "get_sauce:main"
+
+[tool.setuptools.packages.find]
+include = ["get_sauce*"]
